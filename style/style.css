@@ -1,0 +1,217 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Literata', serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    font-style: normal;
+}
+
+.wrapper {
+    margin: 0;
+    width: 100%;
+    min-height: 500px;
+    background-color: #030614;    
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper,
+main,
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.inline-wrapper {
+    margin: 0;
+    width: 1920px;
+    min-height: 500px;
+    background-color: #DDD;
+    box-shadow: 0 8px 6px 1px black;
+}
+
+main,
+footer,
+header,
+section {
+    width: 100%;
+    min-height: 72px;
+}
+
+.inline-footer {
+    width: 1028px;
+}
+
+.wrapper a {
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper a:focus {
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    outline: none;
+}
+
+
+/* HEADER */
+header{
+    background-image: url(./images/bg-top.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.girls {
+    width: 100%;
+    min-height: 666px;
+}
+.right-girl{
+    background-image: url(./images/girl-left1.png);
+    background-position: right;
+}
+.left-girl{
+    background-image: url(./images/girl-right.png);
+    background-position: left;
+}
+.left-girl, .right-girl{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.inline-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header-logo-container{
+    min-width: 200px;
+}
+.header-logo-container a{
+    display: block;
+    min-width: 250px;
+    min-height: 145px;
+    background-image: url(./images/logo_main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-container{
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.user-container a{
+    font-size: 24px;
+    font-weight: bold;
+}
+.user-container span{
+    margin-right: 10px;
+    margin-left: 10px;
+    min-height: 27px;
+    border-right: 3px solid white;
+}
+#signup{
+    width:202px;
+    text-align: right;
+}
+.login-input{
+    background: none;
+    border: none;
+    padding-left: 10px;
+    width: 320px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+}
+.form-input{
+    width: 320px;
+    height: 50px;
+    background: #09223f;
+    border: 2px solid #366799;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 15%), 0 15px 12px rgb(0 0 0 / 11%);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.checkbox:checked+label:before {
+    background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+/* MAIN */
+
+main {
+    min-height: 630px;
+    background-image: url(./images/main-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* FOOTER */
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    background-color: #030614;
+}
+
+.under-footer {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .inline-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 662px) {
+    section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .inline-footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 486px) {
+    
+}
