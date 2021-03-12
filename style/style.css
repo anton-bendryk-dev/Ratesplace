@@ -24,7 +24,6 @@ body {
 }
 
 .wrapper,
-main,
 footer {
     display: flex;
     justify-content: center;
@@ -65,8 +64,37 @@ section {
     border: none;
     outline: none;
 }
-
-
+.wrapper button:focus {
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    outline: none;
+}
+h2, h3, h4, h5{
+    font-weight: bold;
+}
+h2 {
+    font-size: 24px;
+    color: white;
+}
+h3 {
+    font-size: 22px;
+    color: black;
+}
+h4 {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    padding-bottom: 22px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid white;
+}
+h5 {
+    font-size: 22px;
+    color: black;
+    margin: 5px;
+}
 /* HEADER */
 header{
     background-image: url(./images/bg-top.png);
@@ -75,6 +103,7 @@ header{
     background-size: cover;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 .girls {
     width: 100%;
@@ -117,6 +146,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px;
+    margin-bottom: 20px;
 }
 .user-container a{
     font-size: 24px;
@@ -150,35 +180,192 @@ header{
     border-radius: 8px;
     margin-bottom: 10px;
 }
-.login{
+#login-form {
+    visibility: visible;
+}
+#signup-form {
+    visibility: hidden;
+}
+.registration-container form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+.container18{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.container18 input{
+    position: relative;
+    top: 1px;
+    left: 12px;
+}
+.checkbox+label {
+    position: relative;
+    cursor: pointer;
+}
+.checkbox+label:before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -4px;
+    width: 1em;
+    height: 1em;
+    border-radius: 4px;
+    background: #ffc800;
+    transition: .2s;
+}
 .checkbox:checked+label:before {
-    background-image: url("");
+    background-image: url("./images/ic_check.png");
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
 }
+.SendButtonBox{
+    width: 300px;
+}
+.SignupButton {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(89.2deg,#ffdc25 .14%,rgba(255,138,0,.73) 99.29%),#ffd90f;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.SignupButton:hover {
+    box-shadow: 0px 8px 8px black;
+}
 /* MAIN */
-
-main {
+.description-container p{
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+.description-container{
+    min-height: 400px;
+    background-image: url(./images/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+.content-container {
     min-height: 630px;
+    background-color: #002f4f;
+    padding: 10px;
+}
+.content {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+.sidebar-container{
+    min-width: 300px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+#competitions-name {
+    background-color: #124e8c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#competitions-name:hover {
+    background-color: #0d5cafeb;
+    padding-left: 12px;
+}
+.games-list{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.game-container{
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cof-btn {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #ffc800;
+    border-radius: 5px;
+}
+#matchDate {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+}
+.list-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #124e8c;
+}
+.bookmaker-list{
+    margin: 10px;
+    background-color: white; 
+}
+.cof-head{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cof-head h5{
+    text-align: center;
+}
+.bookmaker-container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid;
+}
+.bookmaker-container div{
+    text-align: center;
+}
+.rate-btn{
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #ffc800;
+    border-radius: 5px;
+}
+.rate-btn:hover {
+    background-color: #ff6b02;
+}
+.bookmaker-logo img{
+    max-width: 100px;
+    max-height: 50px;
+}
+/* FOOTER */
+
+footer {
+    min-height: 400px;
+    flex-direction: column;
+    align-items: center;
     background-image: url(./images/main-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-/* FOOTER */
-
-footer {
-    flex-direction: column;
-    align-items: center;
-    background-color: #030614;
 }
 
 .under-footer {
