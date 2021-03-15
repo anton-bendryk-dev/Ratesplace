@@ -112,19 +112,20 @@ header{
 }
 .girls {
     width: 100%;
-    min-height: 666px;
+    min-height: 550px;
 }
 .right-girl{
     background-image: url(./images/girl-left1.png);
-    background-position: right;
+    background-position: right top;
+    background-size: auto;
 }
 .left-girl{
     background-image: url(./images/girl-right.png);
-    background-position: left;
+    background-position: left bottom;
+    background-size: contain;
 }
 .left-girl, .right-girl{
     background-repeat: no-repeat;
-    background-size: contain;
 }
 .inline-header{
     width: 100%;
@@ -278,6 +279,7 @@ header{
     grid-template-columns: 300px auto;
 }
 .sidebar-container{
+    display: inline-table;
     min-width: 300px;
     background-color: white;
     padding-left: 10px;
@@ -299,8 +301,11 @@ header{
     padding: 10px;
     border-radius: 5px;
 }
-.games-list-container{
+.games-main-list-containe{
     display: block;
+}
+.games-list-container{
+    display: none;
 }
 .cof-list-container{
     display: none;
@@ -400,23 +405,150 @@ footer {
         width: 100%;
     }
 }
-
-@media screen and (max-width: 662px) {
-    section {
-        width: 100%;
+@media screen and (max-width: 1440px) {
+    .girls {
+        min-height: 585px;
     }
 }
-
+@media screen and (max-width: 1400px) {
+    .girls {
+        min-height: 400px;
+        background-size: auto;
+    }
+    .right-girl{
+        background-image: url(./images/girl-left2.png);
+        background-position: right top;
+    }
+    .left-girl{
+        background-image: url(./images/girl-right2.png);
+        background-position: left bottom;
+    }
+    .list-container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1356px) {
+    .girls {
+        background: none;
+    }
+    .list-container{
+        width: 80%;
+    }
+}
 @media screen and (max-width: 1028px) {
     .inline-footer {
         width: 100%;
     }
+    .list-container{
+        width: 98%;
+    }
 }
-
+@media screen and (max-width: 1023px) {
+    .content{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    .list-group{
+        display: none;
+    }
+    .arrow-down {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(./images/ic_check.png)
+    }
+    .sidebar-container:hover .list-group{
+        display: inline-block;
+        width: 295px;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        left: 13px;
+    }
+    .sidebar-container{
+        width: 40%;
+    }
+    #competitions-name{
+        width: 100%;
+    }
+    .list-container{
+        width: 100%;
+        margin: 0;
+    }
+    .sidebar-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar-head h3{
+        margin: 5px;
+    }
+    .sidebar-head span{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(./images/menu.png);
+        background-position:center;
+        background-size: contain;
+    }
+    .description-container p {
+        width: 100%;
+        font-size: 16px;
+    }
+}
 @media screen and (max-width: 768px) {
+    .games-list {
+        margin: 0px;
+        padding: 0px;
+    }
+    .inline-footer{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,1fr);
+    }
     
 }
 
-@media screen and (max-width: 486px) {
-    
+@media screen and (max-width: 500px) {
+    h1,h2,h3,h4,h5{
+    font-size: 16px;
+    }  
+    a {
+        font-size: 16px !important;
+    }
+    #signup {
+        width: 140px;
+    }
+    .sidebar-head h3{
+        margin: 15px;
+    }
+    .bookmaker-container div {
+        font-size: 12px !important;
+    }
+    .rate-btn {
+        font-size: 12px !important;
+    }
+    .content-container {
+        padding: 1px;
+    }
+    .bookmaker-container {
+        grid-template-columns: 25% 20% 10% 20% 25%;
+        padding: 3px;
+    }
+    .sidebar-container:hover .list-group{
+        width: 300px;
+        left: 1px;
+    }
+    .sidebar-container{
+        border-radius: 0px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .bookmaker-container {
+        grid-template-columns: 25% 20% 13% 20% 22%;
+    }
+    .rate-btn, .bookmaker-container div {
+        font-size: 10px !important;
+    }
 }
