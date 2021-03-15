@@ -73,6 +73,11 @@ section {
 h2, h3, h4, h5{
     font-weight: bold;
 }
+h1 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
 h2 {
     font-size: 24px;
     color: white;
@@ -139,7 +144,6 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .user-container{
     min-width: 320px;
     display: flex;
@@ -181,10 +185,18 @@ header{
     margin-bottom: 10px;
 }
 #login-form {
-    visibility: visible;
+    display: none;
 }
 #signup-form {
-    visibility: hidden;
+    display: none;
+}
+#welcome-container{
+    display: block;
+}
+#welcome-container p{
+    font-size: 18px;
+    color: white;
+    text-align: center;
 }
 .registration-container form{
     display: flex;
@@ -287,6 +299,12 @@ header{
     padding: 10px;
     border-radius: 5px;
 }
+.games-list-container{
+    display: block;
+}
+.cof-list-container{
+    display: none;
+}
 .game-container{
     background-color: white;
     border-radius: 5px;
@@ -359,21 +377,21 @@ header{
 /* FOOTER */
 
 footer {
-    min-height: 400px;
-    flex-direction: column;
-    align-items: center;
+    min-height: 300px;
     background-image: url(./images/main-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
-.under-footer {
+.inline-footer {
     width: 100%;
-    min-height: 30px;
+    min-height: 200px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
 }
 
 
